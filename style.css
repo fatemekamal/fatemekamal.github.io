@@ -116,11 +116,14 @@ body {
 }
 
 .nav-logo {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-primary);
   text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo-img {
+  height: 32px;
+  width: auto;
 }
 
 .nav-links {
@@ -250,6 +253,24 @@ body {
 .project:hover {
   border-color: var(--color-accent);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.project-image {
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-surface-alt);
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project:hover .project-image img {
+  transform: scale(1.02);
 }
 
 .project-header {
